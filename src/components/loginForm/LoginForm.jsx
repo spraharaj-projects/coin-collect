@@ -4,7 +4,7 @@ import './LoginForm.css'
 import { useNavigate } from 'react-router-dom'
 import { auth } from '../../utils/firebase'
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [gameCode, setGameCode] = useState('')

@@ -1,5 +1,5 @@
 .Coin_sprite {
-  background: url(../../assets/images/coin.png) no-repeat no-repeat;
+  background: url(../../assets/images/diamond.png) no-repeat no-repeat;
   animation: coinFloat 0.8s linear infinite alternate-reverse;
 }
 @keyframes coinFloat {
