@@ -108,7 +108,7 @@ const Game = () => {
       off(allPlayersRef, 'child_added', onChildaddedCallback)
       off(allPlayersRef, 'value', onValueCallback)
     }
-  }, [])
+  }, [playerId])
 
   useEffect(() => {
     const allCoinsRef = ref(database, `coins`)
@@ -135,7 +135,7 @@ const Game = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, user => {
-      if (user) {
+      if (user && user.isAnonymous) {
         setPlayerId(user.uid)
         const player = ref(database, `players/${user.uid}`)
         const name = createName()
@@ -156,6 +156,7 @@ const Game = () => {
         set(player, playerObj)
         onDisconnect(player).remove()
       } else {
+        console.log('Error loading user')
       }
     })
 
