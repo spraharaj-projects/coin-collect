@@ -196,14 +196,6 @@ const Game = () => {
                 y={coins[id].y}
               />
             ))}
-            {/* {coins.map(coin => (
-              <Coin
-                key={getKeyString(coin.x, coin.y)}
-                className="Coin grid-cell"
-                x={coin.x}
-                y={coin.y}
-              />
-            ))} */}
           </GameBoard>
           <PlayerInfo
             name={playerName}
