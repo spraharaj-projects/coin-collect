@@ -21,17 +21,6 @@ const Admin = () => {
       x,
       y,
     })
-    // const coinTimeOuts = [2000, 3000, 4000, 5000]
-
-    // if (coinTimeout) {
-    //   clearTimeout(coinTimeout)
-    // }
-
-    // const newCoinTimeout = setTimeout(() => {
-    //   placeCoin()
-    // }, randomFromArray(coinTimeOuts))
-
-    // setCoinTimeout(newCoinTimeout)
   }
 
   useEffect(() => {
@@ -69,15 +58,6 @@ const Admin = () => {
     return () => {
       activeTimeouts.forEach(timeoutId => clearTimeout(timeoutId))
     }
-
-    // if (gameStatus) {
-    //   placeCoin()
-    // } else {
-    //   if (coinTimeout) {
-    //     clearTimeout(coinTimeout)
-    //     setCoinTimeout(null)
-    //   }
-    // }
   }, [gameStatus])
 
   useEffect(() => {
