@@ -131,7 +131,7 @@ const Game = () => {
       off(allCoinsRef, 'child_added', onClildAddedCallback)
       off(allCoinsRef, 'value', onValueCallback)
     }
-  }, [])
+  }, [playerId])
 
   useEffect(() => {
     onAuthStateChanged(auth, user => {
